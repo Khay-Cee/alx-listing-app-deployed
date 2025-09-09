@@ -1,28 +1,115 @@
-<<<<<<< HEAD
-# alx-listing-app-02
-I implemented a responsive Booking Detail Page in Next.js with TypeScript and Tailwind CSS.
-The page includes:
-- A reusable, accessible BookingForm with contact, payment, and billing fields.
-- An OrderSummary component that calculates totals and uses TypeScript typing.
-- A responsive layout with a grid (form on one side, sticky sidebar summary on desktop).
-- A CancellationPolicy / Ground Rules section documented properly.
-- Code follows modern best practices: semantic HTML, ARIA/labels, autocomplete attributes, TypeScript typing, and reusable components.
+# ALX Listing App - Deployed
 
-Your task:
-1. Review all my code in the project.
-2. Fix any errors, bugs, or broken imports.
-3. Ensure that `pages/booking/index.tsx` correctly imports and uses `BookingForm`, `OrderSummary`, and `CancellationPolicy` from `components/booking/`.
-4. Verify TypeScript typings are correct and strict-safe.
-5. Ensure Tailwind classes are applied correctly for responsiveness (mobile → desktop).
-6. Check that the sticky sidebar works properly on desktop without breaking layout on mobile.
-7. Clean up unused imports, console logs, or redundant code.
-8. Ensure consistent coding style (naming, indentation, prop typing).
-9. Suggest or implement small optimizations for performance and accessibility.
+A modern Airbnb clone built with Next.js, TypeScript, and Tailwind CSS, deployed on Vercel.
 
-Output:
-- Show me the corrected code files (with full content, not just diffs).
-- Explain what changes you made and why.
-=======
-# alx-listing-app-deployed
-alx
->>>>>>> f49a8e171e60bbdc18b63238993cc34f9d588fef
+## 🚀 Live Demo
+
+**Production URL:** [https://alx-listing-app-deployed-ecru.vercel.app/](https://alx-listing-app-deployed-ecru.vercel.app/)
+
+## 📋 Features
+
+- **Property Listings**: Browse available properties with detailed information
+- **Property Details**: View individual property details with images and amenities
+- **Booking System**: Complete booking form with order summary and cancellation policy
+- **Responsive Design**: Optimized for mobile, tablet, and desktop devices
+- **TypeScript**: Full type safety and modern development experience
+- **API Integration**: RESTful API endpoints for properties and reviews
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 15.4.6
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **HTTP Client**: Axios
+- **Deployment**: Vercel
+
+## 📁 Project Structure
+
+```
+├── components/
+│   ├── booking/
+│   │   ├── BookingForm.tsx
+│   │   ├── CancellationPolicy.tsx
+│   │   └── OrderSummary.tsx
+│   └── property/
+│       ├── PropertyCard.tsx
+│       ├── PropertyDetail.tsx
+│       └── ReviewSection.tsx
+├── pages/
+│   ├── api/
+│   │   ├── properties.ts
+│   │   └── properties/
+│   │       ├── [id].ts
+│   │       └── [id]/reviews.ts
+│   ├── booking/
+│   │   └── index.tsx
+│   ├── property/
+│   │   └── [id].tsx
+│   ├── _app.tsx
+│   ├── _document.tsx
+│   └── index.tsx
+└── public/
+```
+
+## 🔧 API Endpoints
+
+- `GET /api/properties` - Fetch all properties
+- `GET /api/properties/[id]` - Fetch specific property details
+- `GET /api/properties/[id]/reviews` - Fetch property reviews
+
+## 🚀 Local Development
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Khay-Cee/alx-listing-app-deployed-1.git
+cd alx-listing-app-deployed
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Create environment variables:
+```bash
+cp .env.example .env.local
+```
+
+4. Run development server:
+```bash
+npm run dev
+```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📦 Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## 🌐 Deployment
+
+This app is deployed on Vercel. To deploy your own instance:
+
+1. Push to GitHub repository
+2. Connect to Vercel dashboard
+3. Set environment variables in Vercel
+4. Deploy automatically
+
+## 📱 Responsive Design
+
+- **Mobile**: Optimized navigation and touch-friendly interface
+- **Tablet**: Balanced layout with enhanced touch interactions  
+- **Desktop**: Full-featured layout with sidebar and grid systems
+
+## 🔐 Environment Variables
+
+```bash
+NEXT_PUBLIC_API_BASE_URL=https://your-domain.vercel.app
+```
+
+## 📄 License
+
+This project is licensed under the MIT License.
